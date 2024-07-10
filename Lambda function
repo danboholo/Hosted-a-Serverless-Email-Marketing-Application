@@ -1,0 +1,44 @@
+import boto3
+import csv
+import os
+
+def lambda_handler(event, context):
+    ses_client = boto3.client('ses')
+    s3_client = boto3.client('s3')
+    
+    # Get email template from S3
+    bucket_name = 'your-s3-bucket-name'
+    template_key = 'email_template.html'
+    contacts_key = 'contacts.csv'
+    
+    try:
+        email_template_obj = s3_client.get_object(Bucket=bucket_name, Key=template_key)
+        email_template = email_template_obj['Body'].read().decode('utf-8')
+        
+        contacts_obj = s3_client.get_object(Bucket=bucket_name, Key=contacts_key)
+        contacts_data = contacts_obj['Body'].read().decode('utf-8').splitlines()
+        
+        contacts = csv.reader(contacts_data)
+        
+        for contact in contacts:
+            email = contact[0]
+            # Customize your email template if necessary
+            response = ses_client.send_email(
+                Source='your-verified-email@domain.com',
+                Destination={
+                    'ToAddresses': [email]
+                },
+                Message={
+                    'Subject': {
+                        'Data': 'Your Subject'
+                    },
+                    'Body': {
+                        'Html': {
+                            'Data': email_template
+                        }
+                    }
+                }
+            )
+            print(f"Email sent to {email}: {response}")
+    except Exception as e:
+        print(f"Error: {e}")

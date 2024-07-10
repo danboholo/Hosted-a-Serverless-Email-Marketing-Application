@@ -50,10 +50,8 @@ serverless-email-marketing-application/
 # Enhancements
 - I included some suggestions for improving the application.
 
-# Cleanup
-- I provided instructions for deleting AWS resources after use.
 
-# Timestamps
-Refer to the video for detailed timestamps.
+
+
 
 

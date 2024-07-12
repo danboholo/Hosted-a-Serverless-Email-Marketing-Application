@@ -55,6 +55,8 @@ Configure Amazon EventBridge to schedule Lambda invocations, automating email se
 
 7. Testing and Validation
 Thoroughly test the system by sending test emails, ensuring correct formatting (email_template.html) and verifying IAM permissions and Lambda configurations. Perform security tests and validate encryption of sensitive data.
+
+
 ---
 
 This README offers a detailed walkthrough of creating a serverless email marketing application on AWS, providing clear steps and insights gained from practical implementation. It covers the integration of various AWS services such as Lambda, SES, and S3 to build a scalable and cost-effective solution. The project setup involves configuring IAM roles, setting up API Gateway, and deploying the necessary Lambda functions. Additionally, the README includes best practices for security and cost management, ensuring that your serverless application is both secure and efficient. The practical examples and detailed instructions make it straightforward to follow and implement the solution.

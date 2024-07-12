@@ -66,4 +66,4 @@ Thoroughly tested the system by sending test emails, ensuring correct formatting
 
 ---
 
-This README offers a detailed walkthrough of creating a serverless email marketing application on AWS, providing clear steps and insights gained from practical implementation. Whether you're new to AWS or experienced with cloud services, this guide ensures you can replicate and customize this solution effectively
+This README offers a detailed walkthrough of creating a serverless email marketing application on AWS, providing clear steps and insights gained from practical implementation. It covers the integration of various AWS services such as Lambda, SES, and S3 to build a scalable and cost-effective solution. The project setup involves configuring IAM roles, setting up API Gateway, and deploying the necessary Lambda functions. Additionally, the README includes best practices for security and cost management, ensuring that your serverless application is both secure and efficient. The practical examples and detailed instructions make it straightforward to follow and implement the solution.

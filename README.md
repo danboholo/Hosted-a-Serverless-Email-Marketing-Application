@@ -25,8 +25,10 @@ serverless-email-marketing-application/
 - **Amazon EventBridge**: Event-driven service for scheduling email tasks.
 - **AWS IAM**: Management of permissions for Lambda and other AWS resources.
 
-## Requirements
 
+![zd](https://github.com/user-attachments/assets/c845b936-8d8f-431c-b080-d74251e24a08)
+
+## Requirements
 To replicate this project, you'll need:
 
 - Valid email addresses to send marketing emails.
